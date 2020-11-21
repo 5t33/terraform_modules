@@ -1,0 +1,23 @@
+[
+  {
+    "name": "hello-world",
+    "image": "455728032032.dkr.ecr.us-east-2.amazonaws.com/hello-world",
+    "cpu": 128,
+    "memory": 128,
+    "essential": true,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+          "awslogs-group": "/ecs/hello-world",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "fargate"
+      }
+    },
+    "portMappings": [
+      {
+        "containerPort": 8081,
+        "hostPort": 8081
+      }
+    ]
+  }
+]
